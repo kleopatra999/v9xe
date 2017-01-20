@@ -1,0 +1,21 @@
+<h1>Listing gridimages</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @gridimages.each do |gridimage| %>
+  <tr>
+    <td><%= link_to 'Show', gridimage %></td>
+    <td><%= link_to 'Edit', edit_gridimage_path(gridimage) %></td>
+    <td><%= link_to 'Destroy', gridimage, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Thing', new_gridimage_path %>

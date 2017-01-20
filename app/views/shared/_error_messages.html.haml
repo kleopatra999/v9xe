@@ -1,0 +1,9 @@
+- if @user.errors.any?
+  #error_explanation
+    %h2
+      = @user.errors.count      
+      个错误发生
+    %p 请更正以下错误:
+    %ul
+      - @user.errors.full_messages.each do |msg|
+        %li= msg

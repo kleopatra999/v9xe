@@ -1,0 +1,9 @@
+- if @micropost.errors.any?
+  #error_explanation
+    %h2
+      = @micropost.errors.count      
+      个错误发生
+    %p 请更正以下错误:
+    %ul
+      - @micropost.errors.full_messages.each do |msg|
+        %li= msg

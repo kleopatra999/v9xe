@@ -1,0 +1,10 @@
+- @user ||= current_user
+.stats
+  %a{:href => following_user_path(@user)}
+    %strong#following.stat
+      = @user.relationships.count 
+    关注
+  %a{:href => followers_user_path(@user)}
+    %strong#followers.stat
+      = @user.reverse_relationships.count
+    粉丝

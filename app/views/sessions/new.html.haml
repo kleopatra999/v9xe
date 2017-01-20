@@ -1,0 +1,14 @@
+%h1 欢迎
+=form_for(:session,:url => sessions_path) do |f|
+  .field
+    =f.label :email,"登录邮箱"
+    %br/
+    =f.text_field :email
+  .field
+    =f.label :password,"密码"
+    %br/
+    =f.password_field :password
+    .actions
+      =f.submit "登录"
+  %p
+    还没有注册呢？#{link_to "现在就去去注册",signup_path}

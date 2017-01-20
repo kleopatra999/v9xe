@@ -1,0 +1,6 @@
+
+%li
+  %p1.content= micropost.content
+  %h6.content= micropost.user.name+"发表在"+micropost.created_at.strftime("%m月%d日%H时%M分")
+  - if current_user?(micropost.user)
+    = link_to "delete", micropost, method:  :delete,confirm: "You sure?", title:   micropost.content
